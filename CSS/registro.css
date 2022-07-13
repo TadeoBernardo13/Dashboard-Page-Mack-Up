@@ -1,0 +1,63 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+
+/* Colors */
+:root 
+{
+    /* DEFAULT COLORS */
+    --white: #fff;
+    --black: #000;
+
+    /* Background body */
+    --back-bg: #f3f7f9;
+    
+    /* menu izq */
+    --blue-bg: #323484;
+    --text-menu: #c7caf3;
+    --blue-btn: #9496ff; 
+
+    /* Dashboard */
+    --text-update: #0a0c38;
+    /* Task Panel */
+    --white-bg: #fff4f2; /* UPLOAD PANEL */
+    --white-bg2:#f6f8ff; /* TO DO PANEL */
+    --blue-text: #3b3d9c;
+    --blue-bg2:#405ef2;
+    --SB-bg:#007042;
+    /* Gradient */
+    --pink: #ff93ce;
+    --blue: #b28efe;
+}
+
+*
+
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    overflow: hidden;
+}
+.back 
+{
+    padding: 50px;
+    background-color: var(--back-bg);
+}
+
+.container 
+{
+    padding: 10px;
+    border-radius: 10px;
+    height: 960px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.btns
+{
+    display: flex;
+}

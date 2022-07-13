@@ -1,0 +1,708 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+
+/* Colors */
+:root 
+{
+    /* DEFAULT COLORS */
+    --white: #fff;
+    --black: #000;
+
+    /* Background body */
+    --back-bg: #f3f7f9;
+    
+    /* menu izq */
+    --blue-bg: #323484;
+    --text-menu: #c7caf3;
+    --blue-btn: #9496ff; 
+
+    /* Dashboard */
+    --text-update: #0a0c38;
+    /* Task Panel */
+    --white-bg: #fff4f2; /* UPLOAD PANEL */
+    --white-bg2:#f6f8ff; /* TO DO PANEL */
+    --blue-text: #3b3d9c;
+    --blue-bg2:#405ef2;
+    --SB-bg:#007042;
+    /* Gradient */
+    --pink: #ff93ce;
+    --blue: #b28efe;
+}
+
+*
+
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    overflow: hidden;
+}
+.back 
+{
+    padding: 50px;
+    background-color: var(--back-bg);
+}
+
+.contenedor 
+{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    height: 960px;
+    background-color: var(--white);
+}
+
+/* Panel menu left */
+.menu-izq 
+{
+    width: 20%;
+    border-radius: 10px;
+    background-color: var(--blue-bg);
+    color: var(--text-menu);
+    overflow: hidden;
+    box-shadow: -37px 28px 72px -30px rgba(10,12,56,0.63);
+    -webkit-box-shadow: -37px 28px 72px -30px rgba(10,12,56,0.63);
+    -moz-box-shadow: -37px 28px 72px -30px rgba(10,12,56,0.63);
+}
+
+.menu-izq .title-menu 
+{
+    padding-top: 50px;
+    color: var(--white);
+    font-size: 30px;
+    font-family: 'Dongle', sans-serif;
+    text-align: center;
+}
+
+.menu-izq .profile 
+{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-izq .profile button
+{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue-btn);
+    border-radius: 5px;
+}
+
+.menu-izq .lista-elementos ul li:hover,
+.menu-izq .lista-elementos ul li.hovered
+{
+    background-color: var(--white);
+}
+
+.menu-izq .lista-elementos ul li:hover a,
+.menu-izq .lista-elementos ul li.hovered a
+{
+    color: var(--blue-bg);
+}
+
+.menu-izq .lista-elementos ul li
+{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.menu-izq .lista-elementos ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--text-menu);
+}
+
+.menu-izq .lista-elementos ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.menu-izq .lista-elementos ul li a .icon ion-icon
+{
+    font-size: 1.75em;
+}
+
+.menu-izq .lista-elementos ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* curva de fuera */
+.menu-izq .lista-elementos ul li:hover a::before,
+.menu-izq .lista-elementos ul li.hovered a::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.menu-izq .lista-elementos ul li:hover a::after,
+.menu-izq .lista-elementos ul li.hovered a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/* Dashboard */
+.dashboard
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 3%;
+    margin-right: 2%;
+    width: 70%;
+    height: 100%;
+    left: 25%;
+}
+/* Texto y botones superior */
+.dashboard .text-btns
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+
+}
+
+.dashboard .text-btns .texto-bienvenida .is-updated
+{
+    color: var(--text-update);
+    font-size: 1.75em;
+}
+
+.dashboard .text-btns .botones
+{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+.dashboard .text-btns .botones a
+{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.dashboard .text-btns .botones i
+{
+    font-size: 1.40em;
+}
+
+/* Task Panel */
+.dashboard .task-panel
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 35%;
+    margin-bottom: 35px;
+}
+/* UPLOAD PANEL */
+.dashboard .task-panel .last-upload
+{
+    background-color: var(--white-bg);
+    border-radius: 30px;
+    padding: 3%;
+    width: 25%;
+    height: 100%;
+}
+
+.dashboard .task-panel .last-upload .img
+{
+    text-align: center;
+}
+.dashboard .task-panel .last-upload img
+{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.dashboard .task-panel .last-upload .text
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.dashboard .task-panel .last-upload .text .fw-bold
+{
+    color: var(--blue-bg);
+}
+
+.dashboard .task-panel .last-upload .text .btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 12px;
+    width: 20%;
+    color: var(--white);
+    background-color: var(--blue-bg);
+    box-shadow: -2px 31px 36px 1px rgba(10,12,56,0.39);
+    -webkit-box-shadow: -2px 31px 36px 1px rgba(10,12,56,0.39);
+    -moz-box-shadow: -2px 31px 36px 1px rgba(10,12,56,0.39);
+}
+
+/* TO DO PANEL */
+.dashboard .task-panel .to-do
+{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+}
+
+/* OPEN PROJECT */
+.dashboard .task-panel .to-do .open-pjt
+{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 5%;
+    margin-bottom: 30px;
+    background-color: var(--white-bg2);
+}
+.dashboard .task-panel .to-do .open-pjt:hover,
+.dashboard .task-panel .to-do .open-pjt:hover .prio,
+.dashboard .task-panel .to-do .open-pjt:hover .title-pjt,
+.dashboard .task-panel .to-do .open-pjt:hover .complete
+{
+    background-color: var(--blue-bg);
+    color: var(--white);
+}
+
+.dashboard .task-panel .to-do .open-pjt .prio, .title-pjt
+{
+    color: var(--blue-bg);
+}
+
+.dashboard .task-panel .to-do .open-pjt .prio
+{
+    font-size: 8px;
+}
+
+.dashboard .task-panel .to-do .open-pjt .task-remaining
+{
+    font-size: 12px;
+}
+
+.dashboard .task-panel .to-do .open-pjt .complete
+{
+    font-size: 12px;
+    color: var(--blue-text);
+}
+
+.dashboard .task-panel .to-do .media-urgent
+{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* MEDIA FILES */
+.dashboard .task-panel .to-do .media-urgent .media
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 4% 0 4% 0;
+    border-radius: 30px;
+    background-color: var(--white-bg2);
+}
+.dashboard .task-panel .to-do .media-urgent .media:hover,
+.dashboard .task-panel .to-do .media-urgent .media:hover .title
+{
+    background-color: var(--blue-bg);
+    color: var(--white);
+}
+
+.dashboard .task-panel .to-do .media-urgent .media .img
+{
+    text-align: center;
+}
+
+.dashboard .task-panel .to-do .media-urgent .media img
+{
+    width: 80%;
+}
+.dashboard .task-panel .to-do .media-urgent .media .media-text
+{
+    text-align: center;
+}
+
+.dashboard .task-panel .to-do .media-urgent .media .title
+{
+    color: var(--blue-bg);
+}
+
+.dashboard .task-panel .to-do .media-urgent .media .media-files
+{
+    font-size: 10px;
+}
+
+/* URGENT TO DO */
+.dashboard .task-panel .to-do .media-urgent .urgent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 4% 0 4% 0;
+    border-radius: 30px;
+    background-color: var(--white-bg2);
+}
+.dashboard .task-panel .to-do .media-urgent .urgent:hover,
+.dashboard .task-panel .to-do .media-urgent .urgent:hover .title
+{
+    background-color: var(--blue-bg);
+    color: var(--white);
+}
+
+.dashboard .task-panel .to-do .media-urgent .urgent .img
+{
+    text-align: center;
+}
+
+.dashboard .task-panel .to-do .media-urgent .urgent img
+{
+    width: 80%;
+}
+.dashboard .task-panel .to-do .media-urgent .urgent .urgent-text
+{
+    text-align: center;
+}
+
+.dashboard .task-panel .to-do .media-urgent .urgent .title
+{
+    color: var(--blue-bg);
+}
+
+.dashboard .task-panel .to-do .media-urgent .urgent .prio
+{
+    font-size: 10px;
+}
+
+/* WEATHER PANEL */
+.dashboard .task-panel .clima
+{
+    width: 30%;
+    height: 100%;
+    padding: 3%;
+    background-image: url(/ASSETS/sky-bg.jpg);
+    border-radius: 30px;
+    box-shadow: -2px 31px 36px 1px rgba(10,12,56,0.39);
+    -webkit-box-shadow: -2px 31px 36px 1px rgba(10,12,56,0.39);
+    -moz-box-shadow: -2px 31px 36px 1px rgba(10,12,56,0.39);
+}
+
+.dashboard .task-panel .clima .weather-cont, .clima-container
+{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard .task-panel .clima .text-weather
+{
+    color: var(--white);
+}
+
+.dashboard .task-panel .clima .text-weather .span1
+{
+    font-size: 30px;
+}
+
+.dashboard .task-panel .clima .text-weather .temp
+{
+    font-size: 60px;
+}
+
+.dashboard .task-panel .clima img
+{
+    width: 100%;
+}
+
+.dashboard .task-panel .clima .btn
+{
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 115px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.dashboard .task-panel .clima .btn .btn-container
+{   
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    color: var(--white);
+    background-color: var(--blue-bg2);
+}
+
+.dashboard .task-panel .clima .btn .btn-container .content
+{
+    color: var(--white);
+    position: relative;
+    top: 15%;
+    left: 1%;
+    font-size: 20px;
+}
+
+/* LEFT TO UPDATE & MODIFY ////////////////////////////////////////////////////////////////////////////////////////////////// */
+.dashboard .updates
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 100%;
+    height: 35%;
+}
+
+/* LAST UPDATES */
+.dashboard .updates .last-update
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+    width: 25%;
+    height: 100%;
+}
+
+.dashboard .updates .last-update .title-updates
+{
+    width: 100%;
+    font-size: 1.60em;
+    color: var(--text-update);
+}
+
+.dashboard .updates .last-update .btns
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dashboard .updates .last-update .btns .brand-adition, .upcoming-tasks
+{
+    width: 40%;
+    height: 40px;
+    font-size: 12px;
+    padding: 3%;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.dashboard .updates .last-update .btns .brand-adition a,
+.dashboard .updates .last-update .btns .upcoming-tasks a
+{
+    text-decoration: none;
+}
+.dashboard .updates .last-update .btns .brand-adition:hover,
+.dashboard .updates .last-update .btns .upcoming-tasks:hover
+{
+    background-color: var(--white-bg);
+    border: solid var(--text-menu) 1px;
+    color: var(--blue-text);
+    font-weight: bold;
+    font-size: 13px;
+}
+.dashboard .updates .last-update .apps
+{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* APP1 */
+.dashboard .updates .last-update .apps .app1
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .updates .last-update .apps .app1 .appdata
+{
+    display: flex;
+    width: 60%;
+}
+
+.dashboard .updates .last-update .apps .app1 .img
+{
+    background-color: var(--SB-bg);
+    border-radius: 10px;
+    text-align: center;
+    padding: 4%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dashboard .updates .last-update .apps .app1 img
+{
+    width: 30px;
+}
+
+/* APP2 */
+.dashboard .updates .last-update .apps .app2
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .updates .last-update .apps .app2 .appdata
+{
+    display: flex;
+    width: 60%;
+}
+
+.dashboard .updates .last-update .apps .app2 .img
+{
+    border-radius: 10px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dashboard .updates .last-update .apps .app2 img
+{
+    width: 100%;
+}
+
+/* APP3 */
+.dashboard .updates .last-update .apps .app3
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .updates .last-update .apps .app3 .appdata
+{
+    display: flex;
+    width: 60%;
+}
+
+.dashboard .updates .last-update .apps .app3 .img
+{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dashboard .updates .last-update .apps .app3 img
+{
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* PANEL PAYMENT */
+.dashboard .updates .panel-payment
+{
+    background: var(--pink);
+    background: linear-gradient(90deg, var(--pink) 5%, var(--blue) 100%);
+    border-radius: 30px;
+    padding: 3%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 31px 36px 1px rgba(220,145,228,0.61);
+-webkit-box-shadow: -2px 31px 36px 1px rgba(220,145,228,0.61);
+-moz-box-shadow: -2px 31px 36px 1px rgba(220,145,228,0.61);
+}
+
+.dashboard .updates .panel-payment .last-upload
+{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard .updates .panel-payment .last-upload .text
+{
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard .updates .panel-payment .last-upload .text .payment-earned
+{
+    text-align: center;
+    width: 100%;
+}
+
+.dashboard .updates .panel-payment .last-upload .text .payment-earned .span1
+{
+    font-size: 1.40em;
+}
+
+.dashboard .updates .panel-payment .last-upload .text .payment-earned .span-money
+{
+    font-size: 3.8em;
+}
+
+.dashboard .updates .panel-payment .last-upload .text .payment-earned .span-earned 
+{
+    font-size: 1.40em;
+}

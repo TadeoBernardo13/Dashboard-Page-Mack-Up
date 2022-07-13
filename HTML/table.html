@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=, initial-scale=1.0" />
+		<link rel="stylesheet" href="/CSS/table-view.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<!-- ICONS BOOSTRAP -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+		/>
+		<title>Table</title>
+	</head>
+	<body>
+		<section class="back">
+			<section class="contenedor">
+				<!--  MENU IZQUIERDO  -->
+				<section class="menu-izq">
+					<div class="title-menu">
+						<p>databerry™</p>
+					</div>
+					<div class="profile">
+						<img
+							src="/ASSETS/profile-pic.jpg"
+							alt=""
+							style="width: 50px; height: 50px; border-radius: 50%"
+						/>
+						<div class="user">
+							<span style="padding-bottom: 0px">Dave Johnson</span><br />
+							<span style="color: #8bbca4; font-size: 10px"
+								>Founder and Ceo</span
+							>
+						</div>
+						<button><ion-icon name="chevron-down-outline"></ion-icon></button>
+					</div>
+					<div class="lista-elementos">
+						<ul>
+							<li>
+								<a href="/HTML/index.html">
+									<span class="icon"
+										><ion-icon name="grid-outline"></ion-icon
+									></span>
+									<span class="title">Dashboard</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="mail-outline"></ion-icon
+									></span>
+									<span class="title">Email</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="folder-open-outline"></ion-icon
+									></span>
+									<span class="title">Projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="file-tray-full-outline"></ion-icon
+									></span>
+									<span class="title">Task</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="people-outline"></ion-icon
+									></span>
+									<span class="title">Teams</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="cash-outline"></ion-icon
+									></span>
+									<span class="title">Payments</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="timer-outline"></ion-icon
+									></span>
+									<span class="title">Upcoming</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="icon"
+										><ion-icon name="checkmark-outline"></ion-icon
+									></span>
+									<span class="title">Done</span>
+								</a>
+							</li>
+							<li>
+								<a href="/HTML/table.html">
+									<span class="icon"
+										><ion-icon name="clipboard-outline"></ion-icon></span>
+									<span class="title">Table view</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- TABLA  -->
+				<section class="table-container">
+					<div class="btns">
+						<p>
+							<a href="/HTML/register.html" class="btn btn-primary">Register a new data <i class="bi bi-box-arrow-in-right"></i></a>
+						</p>
+					</div>
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th scope="col">NAZWA</th>
+								<th scope="col">GROSS</th>
+								<th scope="col">NET</th>
+								<th scope="col">VAT (23%)</th>
+								<th scope="col">STOCK</th>
+								<th scope="col">AVAILABLE</th>
+								<th scope="col">SOLD</th>
+								<th scope="col">EXPIRE DATE</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Monstera</th>
+								<td>48.00</td>
+								<td>39.02</td>
+								<td>8.98</td>
+								<td>A/22</td>
+								<td>
+									<div>
+										<span>10 pcs.</span><br />
+										<span class="text-muted">from 294 pcs.</span>
+									</div>
+								</td>
+								<td>
+									<span>10 pcs.</span>
+										<div
+											class="progress-bar"
+											role="progressbar"
+											style="width: 10%"
+											aria-valuenow="25"
+											aria-valuemin="0"
+											aria-valuemax="100"
+										>
+											10%
+										</div>
+									</div>
+								</td>
+								<td>
+									<span>01-02-2019</span><br>
+									<span class="text-muted">62 days</span>
+								</td>
+								<td>
+									<div class="btns">
+										<div>
+											<button type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+										</div>
+										<div>
+											<button type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">Angelonia</th>
+								<td>32.00</td>
+								<td>28.16</td>
+								<td>8.98</td>
+								<td>B/01</td>
+								<td>
+									<div>
+										<span>200 pcs.</span><br />
+										<span class="text-muted">from 294 pcs.</span>
+									</div>
+								</td>
+								<td>
+									<span>200 pcs.</span>
+										<div
+											class="progress-bar"
+											role="progressbar"
+											style="width: 82%"
+											aria-valuenow="25"
+											aria-valuemin="0"
+											aria-valuemax="100"
+										>
+											82%
+										</div>
+									</div>
+								</td>
+								<td>
+									<span>12-12-2019</span><br>
+									<span class="text-muted">32 days</span>
+								</td>
+								<td>
+									<div class="btns">
+										<div>
+											<button type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+										</div>
+										<div>
+											<button type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">Begonias</th>
+								<td>16.00</td>
+								<td>13.20</td>
+								<td>8.98</td>
+								<td>A/02</td>
+								<td>
+									<div>
+										<span>140 pcs.</span><br />
+										<span class="text-muted">from 200 pcs.</span>
+									</div>
+								</td>
+								<td>
+									<span>140 pcs.</span>
+										<div
+											class="progress-bar"
+											role="progressbar"
+											style="width: 60%"
+											aria-valuenow="25"
+											aria-valuemin="0"
+											aria-valuemax="100"
+										>
+											60%
+										</div>
+									</div>
+								</td>
+								<td>
+									<span>01-02-2019</span><br>
+									<span class="text-muted">62 days</span>
+								</td>
+								<td>
+									<div class="btns">
+										<div>
+											<button type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+										</div>
+										<div>
+											<button type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">Sweet potato</th>
+								<td>48.00</td>
+								<td>39.02</td>
+								<td>8.98</td>
+								<td>A/22</td>
+								<td>
+									<div>
+										<span>310pcs.</span><br />
+										<span class="text-muted">from 320 pcs.</span>
+									</div>
+								</td>
+								<td>
+									<span>310 pcs.</span>
+										<div
+											class="progress-bar"
+											role="progressbar"
+											style="width: 90%"
+											aria-valuenow="25"
+											aria-valuemin="0"
+											aria-valuemax="100"
+										>
+											90%
+										</div>
+									</div>
+								</td>
+								<td>
+									<span>01-02-2019</span><br>
+									<span class="text-muted">62 days</span>
+								</td>
+								<td>
+									<div class="btns">
+										<div>
+											<button type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+										</div>
+										<div>
+											<button type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">Marigolds</th>
+								<td>32.00</td>
+								<td>28.16</td>
+								<td>8.98</td>
+								<td>B/12</td>
+								<td>
+									<div>
+										<span>140 pcs.</span><br />
+										<span class="text-muted">from 294 pcs.</span>
+									</div>
+								</td>
+								<td>
+									<span>154 pcs.</span>
+										<div
+											class="progress-bar"
+											role="progressbar"
+											style="width: 82%"
+											aria-valuenow="25"
+											aria-valuemin="0"
+											aria-valuemax="100"
+										>
+											82%
+										</div>
+									</div>
+								</td>
+								<td>
+									<span>01-02-2019</span><br>
+									<span class="text-muted">62 days</span>
+								</td>
+								<td>
+									<div class="btns">
+										<div>
+											<button type="button" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+										</div>
+										<div>
+											<button type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+		</section>
+	</body>
+	<!--  SCRIPTS  -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"
+	></script>
+	<!--  IONICONS  -->
+	<script
+		type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+	></script>
+	<script
+		nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+	></script>
+</html>
